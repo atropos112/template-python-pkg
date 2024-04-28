@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "{{ project_slug.replace('_', '-') }}"
+version = "0.0.1"
+description = "{{ project_description }}"
+authors = ["{{ author }} <{{ email }}>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "{{ project_slug }}", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.10.0"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-include-markdown-plugin = "^6.0.5"
+mkdocs-material = "^9.5.15"
+mkdocstrings = "^0.24.1"
+mkdocstrings-python = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120

@@ -1,0 +1,19 @@
+---
+project_name:
+  type: str
+  help: "The name of the project"
+project_slug:
+  type: str
+  when: false # This will not be asked
+  default: "{{ project_name.lower().replace(' ', '_') }}"
+author:
+  type: str
+  help: "The name of the author"
+  default: "atropos"
+email:
+  type: str
+  help: "The email of the author"
+  default: "sv7n@pm.me"
+project_description:
+  type: str
+  help: "A short description of the project"
