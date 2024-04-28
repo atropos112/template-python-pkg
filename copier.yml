@@ -5,7 +5,7 @@ project_name:
 project_slug:
   type: str
   when: false # This will not be asked
-  default: "{{ project_name.lower().replace(' ', '_') }}"
+  default: "{{ project_name.lower().replace(' ', '_').replace('-', '_') }}"
 author:
   type: str
   help: "The name of the author"
