@@ -1,1 +1,18 @@
 # {{ project_name }}
+
+
+# TO DO AFTER COPYING A TEMPLATE
+1. Settings -> Code and automation -> Actions -> General: 
+    - Workflow permissions:
+        - Select **Read and write permissions**
+        - Tick **Allow GitHub Actions to create and approve pull requests**
+        - Press Save.
+2. Settings -> Security -> Secrets and variables -> Actions:
+    - Add CodeCov token (in BitWarden)
+    - Add PyPI token (in BitWarden)
+3. After successful publish docs build will have `gh-pages` branch. Go to Settings -> Code and automation -> Pages -> Branch: `gh-pages` and Save.
+4. Codecov: go to Codecov website and set this repo to be included.
+5. Clean up:
+    - Remove the silly example test.
+    - Remove this readme content and replace with project specific content.
+    - Press about kog and select **Use your GitHub Pages website**.
