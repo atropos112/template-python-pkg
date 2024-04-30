@@ -8,11 +8,15 @@
         - Tick **Allow GitHub Actions to create and approve pull requests**
         - Press Save.
 2. Settings -> Security -> Secrets and variables -> Actions:
-    - Add CodeCov token (in BitWarden)
     - Add PyPI token (in BitWarden)
-3. After successful publish docs build will have `gh-pages` branch. Go to Settings -> Code and automation -> Pages -> Branch: `gh-pages` and Save.
-4. Codecov: go to Codecov website and set this repo to be included.
-5. Clean up:
+3. Settings -> Security -> Code security and analysis:
+    - Enable Private vulnerabilities alert
+    - Enable Dependabot stuff (all)
+    - Select basic CodeQL analysis 
+    - Enable Secret scanning
+4. After successful publish docs build will have `gh-pages` branch. Go to Settings -> Code and automation -> Pages -> Branch: `gh-pages` and Save.
+5. Codecov: go to Codecov website and set this repo to be included. Then add the token given to the secrets (as in step 2).
+6. Clean up:
     - Remove the silly example test.
     - Remove this readme content and replace with project specific content.
     - Press about kog and select **Use your GitHub Pages website**.
