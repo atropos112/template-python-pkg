@@ -16,6 +16,15 @@
     - Enable Secret scanning
 4. After successful publish docs build will have `gh-pages` branch. Go to Settings -> Code and automation -> Pages -> Branch: `gh-pages` and Save.
 5. Codecov: go to Codecov website and set this repo to be included. Then add the token given to the secrets (as in step 2).
+6. Make branch protection rule in Code and automation -> Branches -> Add rule:
+    - Branch name pattern: `main`
+    - Require a pull request before merging
+        - Require approvals
+    - Require status checks to pass before merging
+        - Require branches to be up to date
+    - Allow force pushes
+        - Specify who can force push: atropos
+
 6. Clean up:
     - Remove the silly example test.
     - Remove this readme content and replace with project specific content.
