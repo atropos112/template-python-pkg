@@ -1,3 +1,4 @@
+{% raw %}
 ---
 name: Test
 on:
@@ -34,4 +35,5 @@ jobs:
         uses: codecov/codecov-action@v4.5.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+{% endraw %}
           slug: atropos112/{{ project_name }}
